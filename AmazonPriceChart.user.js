@@ -6,7 +6,6 @@
 // @description    Adds CamelCamelCamel graph to Amazon product pages.
 // @namespace      null
 // @include        *://www.amazon.*/*
-// @require        https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js
 // @grant          GM_xmlhttpRequest
 // @connect        camelcamelcamel.com
 // ==/UserScript==
@@ -16,8 +15,7 @@ const width = 800;
 const height = 250;
 const chart = 'amazon-new-used'; //Possible other values are "amazon", "new", "used", "new-used", & "amazon-new-used"
 
-const $element = $(':input[id="ASIN"]');
-const asin = $.trim($element.attr('value'));
+const asin = document.getElementById('ASIN').value;
 
 if (asin.length) {
     // Retrieve top level domain name to determine correct country subdomain for camelcamelcamel
@@ -44,11 +42,11 @@ if (asin.length) {
 </div>
 <hr size="1" noshade="noshade" class="bucketDivider">`;
 
-            if ($('#descriptionAndDetails').length) {
-                $('#descriptionAndDetails').prepend(insertHTML);
+            if (!!document.getElementById('descriptionAndDetails')) {
+                document.getElementById('descriptionAndDetails').insertAdjacentHTML('afterBegin', insertHTML);
             }
-            else if ($('#ask-btf_feature_div').length) {
-                $('#ask-btf_feature_div').prepend(insertHTML);
+            else if (!!document.getElementById('descriptionAndDetails')) {
+                document.getElementById('descriptionAndDetails').insertAdjacentHTML('afterBegin', insertHTML);
             }
         }
     });
