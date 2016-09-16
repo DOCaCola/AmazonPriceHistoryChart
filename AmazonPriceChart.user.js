@@ -2,7 +2,7 @@
 // @name           Amazon Price History Chart
 // @author         DOCa Cola
 // @license        GNU GPLv3
-// @version        1.0
+// @version        1.1
 // @description    Adds CamelCamelCamel graph to Amazon product pages.
 // @namespace      null
 // @include        *://www.amazon.*/*
