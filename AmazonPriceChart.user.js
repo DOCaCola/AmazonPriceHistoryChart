@@ -35,7 +35,7 @@ if (asin.length) {
             const insertHTML = `
 <div class="bucket">
   <div class="a-divider a-divider-section"></div>
-  <h2 class="default">Price history</h2>$
+  <h2 class="default">Price history</h2>
   <div id="camelcamelcamel content pdClearfix" style="margin: 10px">
     ${link2}
   </div>
