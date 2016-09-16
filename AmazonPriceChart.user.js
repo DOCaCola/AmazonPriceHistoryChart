@@ -42,12 +42,8 @@ if (asin.length) {
 </div>
 <hr size="1" noshade="noshade" class="bucketDivider">`;
 
-            if (!!document.getElementById('descriptionAndDetails')) {
-                document.getElementById('descriptionAndDetails').insertAdjacentHTML('afterBegin', insertHTML);
-            }
-            else if (!!document.getElementById('descriptionAndDetails')) {
-                document.getElementById('descriptionAndDetails').insertAdjacentHTML('afterBegin', insertHTML);
-            }
+            const el = (document.getElementById('descriptionAndDetails') || document.getElementById('ask-btf_feature_div') || false);
+            if (el) el.insertAdjacentHTML('afterBegin', insertHTML);
         }
     });
 }
