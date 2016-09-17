@@ -41,9 +41,13 @@ if (asin.length) {
   </div>
 </div>
 <hr size="1" noshade="noshade" class="bucketDivider">`;
-
-            const el = (document.getElementById('descriptionAndDetails') || document.getElementById('ask-btf_feature_div') || false);
-            if (el) el.insertAdjacentHTML('afterBegin', insertHTML);
+            const el = (document.getElementById('descriptionAndDetails')
+                        || document.getElementById('ask-btf_feature_div')
+                        || document.getElementById('biss-product-description-and-details')
+                        || false);
+            if (el) {
+                el.insertAdjacentHTML('afterBegin', insertHTML);
+            }
         }
     });
 }
